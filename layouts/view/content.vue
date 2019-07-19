@@ -1,6 +1,6 @@
 <template>
   <v-content>
-    <v-container class="grey darken-3">
+    <v-container class="grey darken-3" :style="{'min-height': '100%'}">
       <div>
         <nuxt />
       </div>
