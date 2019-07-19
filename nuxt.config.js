@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export default {
   mode: 'universal',
-  router: { base: '/' },
+  router: { base: './' },
 
   /*
   ** Headers of the page
