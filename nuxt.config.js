@@ -17,6 +17,9 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
+      },
+      {
+        name:"naver-site-verification", content:"b7e968640f73f091569e1bba8f9dec5d47887e02"
       }
     ],
     link: [
