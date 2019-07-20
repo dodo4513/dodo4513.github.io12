@@ -108,6 +108,7 @@ export default {
     font-size: 21px;
     line-height: 1.58;
     letter-spacing: -.003em;
+    margin-bottom: 50px !important;
   }
 
   img {
