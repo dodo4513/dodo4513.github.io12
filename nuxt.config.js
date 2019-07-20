@@ -17,9 +17,6 @@ export default {
         hid: 'description',
         name: 'description',
         content: process.env.npm_package_description || ''
-      },
-      {
-        name:"naver-site-verification", content:"b7e968640f73f091569e1bba8f9dec5d47887e02"
       }
     ],
     link: [
@@ -67,7 +64,8 @@ export default {
           icons: ['fab']
         }
       ]
-    }]
+    }],
+    '@nuxtjs/sitemap'
   ],
   /*
   ** Axios module configuration
@@ -105,6 +103,18 @@ export default {
   },
   generate: {
     routes: function () {
+      return axios.get('http://localhost:8081/posts')
+        .then((res) => {
+          return res.data.postResponses.map((post) => {
+            return '/posts/' + post.postNo
+          })
+        })
+    }
+  },
+  sitemap: {
+    hostname: 'https://dodo4513.github.com',
+    gzip: true,
+    routes() {
       return axios.get('http://localhost:8081/posts')
         .then((res) => {
           return res.data.postResponses.map((post) => {
